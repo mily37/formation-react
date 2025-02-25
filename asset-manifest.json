@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/formation-react/static/css/main.01c553df.css",
+    "main.js": "/formation-react/static/js/main.f5dc6c51.js",
+    "static/media/logo.png": "/formation-react/static/media/logo.7feb6621573e09d2a6d9.png",
+    "index.html": "/formation-react/index.html",
+    "main.01c553df.css.map": "/formation-react/static/css/main.01c553df.css.map",
+    "main.f5dc6c51.js.map": "/formation-react/static/js/main.f5dc6c51.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.01c553df.css",
+    "static/js/main.f5dc6c51.js"
+  ]
+}
