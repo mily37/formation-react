@@ -63,7 +63,7 @@ describe("useProductStore", () => {
 
     describe("Test des mutations du store", () => {
         // Clear the store before each test
-        beforeEach(() => {
+        // beforeEach(() => {
             // useProductStore.setState({
             //   products: productList,
             //   cartItems: []
@@ -74,7 +74,7 @@ describe("useProductStore", () => {
             // useShopStore.mockReturnValue({
             //     setMessage: mockSetMessage
             // })
-        })
+        // })
         // test("Récupération des produits", async () => {
         //     // GRAVE erreur : ne pas tester trop loin de notre élément cible
         //     // Mock fetch API
