@@ -7,12 +7,15 @@ import useAuthStore from "../store/authStore.ts";
 
 function Header({ setPage }) {
   const [isDropdownOpen, setIsDropDownOpen] = useState(false);
-  const logout = useAuthStore(state => state.logout);
-  const user = useAuthStore(state => state.user);
-  const isAuthenticated = useAuthStore(state => state.isAuthenticated);
+  const logout = useAuthStore((state) => state.logout);
+  const user = useAuthStore((state) => state.user);
+  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
+
 
   // const {theme} = useContext(ThemeContext);
   const { theme } = useTheme();
+  // const isAuthenticated = false;
+  // const user = {};
 
   const handleToggleDropdown = () => {
     setIsDropDownOpen(!isDropdownOpen);

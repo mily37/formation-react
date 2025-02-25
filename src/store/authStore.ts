@@ -9,27 +9,27 @@ import useProductStore from "./productStore"
 
 interface Address {
     firstline: string,
-    postcode: string,
+    postcode: string
     city: string
 }
 
 interface User {
-    id: number, 
+    id: number,
     firstname: string,
-    lastname: string, 
-    email: string,
+    lastname: string,
+    email: string
     address?: Address
 }
 
 interface AuthState {
     isAuthenticated: boolean,
     token?: string,
-    user?: User
+    user?: User,
 }
 
-interface AuthActions {
+interface AuthActions{
     login: (email: string, password: string) => Promise<void>,
-    logout: () => void
+    logout: () => void,
 }
 
 const authStore: StateCreator<AuthState & AuthActions, [["zustand/devtools", never]]> = (set, get) => ({
@@ -60,8 +60,16 @@ const authStore: StateCreator<AuthState & AuthActions, [["zustand/devtools", nev
         })
         // Vider le panier
         useProductStore.getState().resetCart();
-    }
+        set({token: undefined, user:undefined, isAuthenticated: false})
+
+        useShopStore.getState().setMessage({
+            messageText: "Disconnection succesful",
+            type: "info"
+        });
+    },
 })
+
+
 
 const useAuthStore = create<AuthState & AuthActions>()(
     persist(

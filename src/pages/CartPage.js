@@ -15,6 +15,21 @@ function CartPage() {
   const tax = subtotal * 0.2; // Assuming 10% tax
   const total = subtotal + tax;
 
+  const handleAddClick = (item) => {
+    // console.log(item);
+    updateQty("increment", item.id);
+  }
+
+  const handleRemoveClick = (item) => {
+    // console.log(item);
+    updateQty("decrement",item.id);
+  }
+
+  const handleResetClick = (item) => {
+    // console.log(item);
+    removeFromCart(item.id);
+  }
+
   return (
     <PageLayout
       titleFr={`Panier (${totalQty})`}
@@ -34,14 +49,14 @@ function CartPage() {
               <div className="cart-item-buttons">
                 <button
                   className="btn cart-item-edit-qty"
-                  onClick={() => updateQty("decrement", item.id)}
+                  onClick={() => handleRemoveClick(item)}
                 >
                   -
                 </button>
                 <span className="cart-item-qty">{item.quantity}</span>
                 <button
                   className="btn cart-item-edit-qty"
-                  onClick={() => updateQty("increment", item.id)}
+                  onClick={() => handleAddClick(item)}
                 >
                   +
                 </button>
@@ -49,7 +64,7 @@ function CartPage() {
             </div>
             <button
               className="btn cart-item-remove"
-              onClick={() => removeFromCart(item.id)}
+              onClick={() => handleResetClick(item)}
             >
               Retirer
             </button>

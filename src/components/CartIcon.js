@@ -1,6 +1,7 @@
 import useProductStore from "../store/productStore.ts";
 
 function CartIcon({ setPage }) {
+
   const items = useProductStore((state) => state.cartItems);
 
   const handleGoToCart = () => {
