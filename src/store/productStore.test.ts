@@ -51,13 +51,15 @@ describe("useProductStore", () => {
     // ProductService.getProductsFromApi = mockStaticMethod;
 
     describe("initialisation", () => {
-        // test("Le store doit s'initialiser correctement", () => {
+        test("Le store doit s'initialiser correctement", () => {
         //     const { result } = renderHook(() => useProductStore());
         //     // console.log(result.current)
         //     expect(result.current.products).toHaveLength(0);
         //     expect(result.current.cartItems).toEqual([]);
-        // });
+        });
     })
+
+
 
     describe("Test des mutations du store", () => {
         // Clear the store before each test
