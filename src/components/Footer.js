@@ -14,6 +14,7 @@ function Footer() {
   const handleToggleTheme = () => {
     // setTheme(theme === "light" ? "dark" : "light");
     toggleTheme();
+
   };
   return (
     <footer>
